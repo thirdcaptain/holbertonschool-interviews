@@ -43,6 +43,7 @@ int binary_search(int *array, size_t size, int value)
 
 	while (start <= end)
 	{
+		printf("mid %lu, start %lu, end %lu\n", mid, start, end);
 		mid = (end + start) / 2;
 		print_array(array, start, end);
 		if (cursor[mid] == value)
@@ -54,7 +55,7 @@ int binary_search(int *array, size_t size, int value)
 		}
 		else
 		{
-			end = mid - 1;
+			end = mid;
 		}
 	}
 	return (-1);
