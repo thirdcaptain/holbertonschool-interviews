@@ -49,9 +49,13 @@ int binary_search(int *array, size_t size, int value)
 			return (mid);
 
 		if (cursor[mid] < value)
+		{
 			start = mid + 1;
+		}
 		else
+		{
 			end = mid - 1;
+		}
 	}
 	return (-1);
 }
